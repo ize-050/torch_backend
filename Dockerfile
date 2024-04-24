@@ -29,4 +29,4 @@ COPY composer.json ./
 RUN composer install
 
 # Set the default command to run php-fpm
-CMD ["php-fpm"]
+# CMD ["php artisan serve"]
