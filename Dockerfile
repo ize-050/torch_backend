@@ -1,5 +1,5 @@
 # use PHP 8.2
-FROM php:8.2-fpm
+FROM php:8.2-cli
 
 # Install common php extension dependencies
 RUN apt-get update && apt-get install -y \
