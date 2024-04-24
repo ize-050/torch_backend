@@ -1,0 +1,146 @@
+{
+  "_index-CnB-Vdc2.js": {
+    "file": "assets/index-CnB-Vdc2.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index-D69htRfc.js": {
+    "file": "assets/index-D69htRfc.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index.esm-CeyrmCcp.js": {
+    "file": "assets/index.esm-CeyrmCcp.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_sweetalert2.all-D9dqaZPf.js": {
+    "file": "assets/sweetalert2.all-D9dqaZPf.js",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Banner/Add.jsx": {
+    "file": "assets/Add-Bxe0QQbZ.js",
+    "src": "resources/js/Pages/Banner/Add.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js",
+      "_index-D69htRfc.js"
+    ]
+  },
+  "resources/js/Pages/Banner/Edit.jsx": {
+    "file": "assets/Edit-C6-s-dYU.js",
+    "src": "resources/js/Pages/Banner/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js",
+      "_index-D69htRfc.js"
+    ]
+  },
+  "resources/js/Pages/Banner/Table.jsx": {
+    "file": "assets/Table-tKKEgDZ3.js",
+    "src": "resources/js/Pages/Banner/Table.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_sweetalert2.all-D9dqaZPf.js",
+      "_index-CnB-Vdc2.js"
+    ]
+  },
+  "resources/js/Pages/Catgory/Add.jsx": {
+    "file": "assets/Add-xKLkTSXD.js",
+    "src": "resources/js/Pages/Catgory/Add.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js"
+    ]
+  },
+  "resources/js/Pages/Catgory/Edit.jsx": {
+    "file": "assets/Edit-DpuX5tX8.js",
+    "src": "resources/js/Pages/Catgory/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js"
+    ]
+  },
+  "resources/js/Pages/Catgory/Table.jsx": {
+    "file": "assets/Table-Bs0TPe6A.js",
+    "src": "resources/js/Pages/Catgory/Table.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Product/Add.jsx": {
+    "file": "assets/Add-CaY9LLLK.js",
+    "src": "resources/js/Pages/Product/Add.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js",
+      "_index-D69htRfc.js"
+    ]
+  },
+  "resources/js/Pages/Product/Edit.jsx": {
+    "file": "assets/Edit-kGQMmTCJ.js",
+    "src": "resources/js/Pages/Product/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index.esm-CeyrmCcp.js",
+      "_sweetalert2.all-D9dqaZPf.js",
+      "_index-D69htRfc.js"
+    ]
+  },
+  "resources/js/Pages/Product/Table.jsx": {
+    "file": "assets/Table-CfvbW7V_.js",
+    "src": "resources/js/Pages/Product/Table.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index-CnB-Vdc2.js",
+      "_sweetalert2.all-D9dqaZPf.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome-CdYG5Aa6.js",
+    "src": "resources/js/Pages/Welcome.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-tKDJcObQ.js",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Banner/Add.jsx",
+      "resources/js/Pages/Banner/Edit.jsx",
+      "resources/js/Pages/Banner/Table.jsx",
+      "resources/js/Pages/Catgory/Add.jsx",
+      "resources/js/Pages/Catgory/Edit.jsx",
+      "resources/js/Pages/Catgory/Table.jsx",
+      "resources/js/Pages/Product/Add.jsx",
+      "resources/js/Pages/Product/Edit.jsx",
+      "resources/js/Pages/Product/Table.jsx",
+      "resources/js/Pages/Welcome.jsx"
+    ],
+    "css": [
+      "assets/app-Cw6X8DTi.css"
+    ]
+  }
+}
