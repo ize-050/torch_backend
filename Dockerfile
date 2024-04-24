@@ -1,5 +1,5 @@
 # use PHP 8.2
-FROM php:8.2-cli
+FROM php:8.2-fpm
 
 # Install common php extension dependencies
 RUN apt-get update && apt-get install -y \
@@ -28,5 +28,6 @@ COPY --from=composer:2.6.5 /usr/bin/composer /usr/local/bin/composer
 COPY composer.json ./
 RUN composer install
 
+EXPOSE 9000
 # Set the default command to run php-fpm
-# CMD ["php artisan serve"]
+CMD ["php-fpm"]

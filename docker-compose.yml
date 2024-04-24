@@ -27,8 +27,6 @@ services:
     container_name: php
     restart: unless-stopped
     tty: true
-    expose:
-      - "9000"
     volumes:
       - .:/var/www/app:delegated
     networks:
