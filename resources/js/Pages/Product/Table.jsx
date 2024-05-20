@@ -78,6 +78,29 @@ const ProductTable = ({ product }) => {
                                 </span>
                             </div>
                         </div>
+                        <br></br>
+                        <div className="pagination flex justify-between items-center 10">
+                                <button
+                                    className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-md ${currentPage === 1 ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                                    onClick={() => handlePageChange(currentPage - 1)}
+                                    disabled={currentPage === 1}
+                                >
+                                    ก่อนหน้า
+                                </button>
+                                <span className="text-gray-700">
+                                    Page {currentPage} of {totalPages}
+                                </span>
+                                <button
+                                    className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-md ${currentPage === totalPages ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+                                    onClick={() => handlePageChange(currentPage + 1)}
+                                    disabled={currentPage === totalPages}
+                                >
+                                    ถัดไป
+                                </button>
+                            </div>
+                            
+                            
+
                         <div className="overflow-x-auto">
                             <table id="example1" className="table table-bordered table-striped">
                                 <thead>
@@ -93,7 +116,7 @@ const ProductTable = ({ product }) => {
                                 </thead>
                                 <tbody>
                                     {slicedItems.map((item, index) => (
-                                        item.product_images_small = `${item.product_images}?w=100px&h=100px&fit=crop&auto=format&dpr=1`,
+                                        item.product_images_small = `${item.product_images}?w=80px&h=50px&fit=crop&auto=format&dpr=1`,
                                         console.log('item', item),
                                         <tr key={index}>
                                             <td>{index + 1}</td>
@@ -105,7 +128,7 @@ const ProductTable = ({ product }) => {
                                                     large={item.product_images}
                                                     alt={item.product_title}
                                                     height={100}
-                                                   className="rounded-lg w-[220px] h-[220px] object-cover"
+                                                   className="rounded-lg w-[100px] h-[70px] object-cover"
                                                 />
 
                                             </td>
@@ -144,25 +167,7 @@ const ProductTable = ({ product }) => {
                                 </tbody>
                             </table>
 
-                            <div className="pagination flex justify-between items-center mt-4">
-                                <button
-                                    className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-md ${currentPage === 1 ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                                    onClick={() => handlePageChange(currentPage - 1)}
-                                    disabled={currentPage === 1}
-                                >
-                                    ก่อนหน้า
-                                </button>
-                                <span className="text-gray-700">
-                                    Page {currentPage} of {totalPages}
-                                </span>
-                                <button
-                                    className={`px-4 py-2 bg-gray-200 text-gray-700 rounded-md ${currentPage === totalPages ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                                    onClick={() => handlePageChange(currentPage + 1)}
-                                    disabled={currentPage === totalPages}
-                                >
-                                    ถัดไป
-                                </button>
-                            </div>
+                        
                         </div>
                     </div>
                 </div>
