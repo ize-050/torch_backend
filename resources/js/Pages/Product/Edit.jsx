@@ -115,7 +115,7 @@ export default function Edit({ catgory, product }) {
         setValue('cat_id', product.cat_id)
 
         product?.product_images.map((item, index) => {
-            const url = `http://localhost:8000/images/product/${product.id}/${item.image_names}`;
+            const url = `http://amboss.cc/images/product/${product.id}/${item.image_names}`;
 
             console.log('url', url)
             setFiles(files => [...files, { url, id: index, image_id: item.id }]);
