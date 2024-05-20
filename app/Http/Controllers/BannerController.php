@@ -119,13 +119,13 @@ class BannerController extends Controller
     
             // Find the image entry in the database
             $image = Banner::findOrFail($id);
-           
+            
             // Delete the image file from the folder
             $filePath = public_path('images/banner/'  . $image->banner_picture);
             if (file_exists($filePath)) {
                 unlink($filePath); 
             }
-            $image->banner_picture = null;
+            $image->banner_picture = "";
             $image->save();
             return response()->json(['message' => 'success'])->setStatusCode(200);
         

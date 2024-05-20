@@ -56,7 +56,7 @@ export default function Edit({ catgory, product }) {
 
 
             try {
-                const response = await axios.post('http://testtourchpro.com/api/product/images/' + product.id, formData, {
+                const response = await axios.post(`product/images/` + product.id, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 for (let i = 0; i < response.data.length; i++) {
@@ -75,11 +75,11 @@ export default function Edit({ catgory, product }) {
 
 
 
-    const handleFileUpload = async (event) => {
+    const handleEditImage = async (event) => {
         const formData = new FormData();
         formData.append('product_images', event.target.files);
         try {
-            const response = await axios.post('/product/images/' + product.id, formData, {
+            const response = await axios.post('product/images/' + product.id, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             files.push(response.data);
@@ -91,7 +91,7 @@ export default function Edit({ catgory, product }) {
     const handleDelete = async (index, image_id) => {
 
         try {
-            const response = await axios.delete('http://testtourchpro.com/api/product/images/' + image_id, {
+            const response = await axios.delete(`product/images/` + image_id, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
 
@@ -115,7 +115,7 @@ export default function Edit({ catgory, product }) {
         setValue('cat_id', product.cat_id)
 
         product?.product_images.map((item, index) => {
-            const url = "http://testtourchpro.com/images/product/" + product.id + "/" + item.image_names
+            const url = `http://localhost:8000/images/product/${product.id}/${item.image_names}`;
 
             console.log('url', url)
             setFiles(files => [...files, { url, id: index, image_id: item.id }]);
@@ -133,14 +133,7 @@ export default function Edit({ catgory, product }) {
                     // Revoke data uri after image is loaded
                     onLoad={() => { URL.revokeObjectURL(file.url) }}
                 />
-                <button
-                    type="button"
-                    onClick={() => handleEditImage(file.id)}
-                    className="absolute top-0 right-0 p-1 bg-gray-800 rounded-full text-white text-xs"
-                    style={{ zIndex: 1 }}
-                >
-                    Edit
-                </button>
+               
                 <button
                     type="button"
                     onClick={() => handleDelete(file.id, file.image_id)} // Assuming handleDelete accepts an index/id
@@ -355,7 +348,7 @@ export default function Edit({ catgory, product }) {
                                     )} />
                             </div>
                         </div>
-                        <div className="my-8 p-3">
+                        <div className="my-12 p-3">
                             <button type="submit" className="text-white mr-3 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">บันทึกข้อมูล</button>
                             <button type="button" onClick={() => {
                                 router.get(`/product`)

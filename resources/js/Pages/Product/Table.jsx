@@ -16,7 +16,7 @@ const ProductTable = ({ product }) => {
     }, [product])
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(2); // Change this to the desired number of items per page
+    const [itemsPerPage] = useState(5); // Change this to the desired number of items per page
     const [searchQuery, setSearchQuery] = useState('');
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;

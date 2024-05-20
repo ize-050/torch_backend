@@ -1,14 +1,24 @@
 import React from 'react';
 
 import { router } from "@inertiajs/react"
+import Cookies from 'js-cookie';
 
 const Menu = () => {
     return (
         <>
             <aside className="main-sidebar flex flex-col flex-1 h-screen sidebar-dark-primary elevation-4">
-                <a href="/" className="brand-link">
+                <a href="/product" className="brand-link">
                     {/* <Image src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style="opacity: .8"> */}
-                    <span className="brand-text font-weight-light">TorchProduct</span>
+                    <span className="brand-text font-weight-light" >
+                   
+                        <img src='/2.png' width="100" style={{
+                       textAlign: 'center',
+                       margin: 'auto',
+                       alignItems: 'center',
+                        fontSize: '20px',
+                        color: 'white'
+                    }}></img>
+                    </span>
                 </a>
                 <div className="sidebar">
 
@@ -53,17 +63,33 @@ const Menu = () => {
         
                                     <p>
                                         สินค้า
-                                        <span className="badge badge-info right">2</span>
+                                        {/* <span className="badge badge-info right">2</span> */}
                                     </p>
                                 </a>
                             </li>
 
                             <li className="nav-header">ติดต่อเรา</li>
                             <li className="nav-item">
-                                <a href="pages/calendar.html" className="nav-link">
+                                <a href="javascript:void(0)"
+                                onClick={()=>{
+                                    router.get('/banner')
+                                 }}
+                                className="nav-link">
                                     <i className="nav-icon far fa-calendar-alt"></i>
                                     <p>
                                         ข้อมูลเกี่ยวกับเรา
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li className="nav-item">
+                                <a  onClick={()=>{
+                                    Cookies.remove('admin_logged_in');
+                                    window.location.href = '/';
+                                 }} className="nav-link">
+                                    <i className="nav-icon far fa-user-alt"></i>
+                                    <p>
+                                        ออกจากระบบ
                                     </p>
                                 </a>
                             </li>

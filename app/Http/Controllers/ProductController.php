@@ -158,8 +158,10 @@ class ProductController extends Controller
 
     public function deleteImages($id)
     {
+      
         try {
-    
+            
+            
             // Find the image entry in the database
             $image = ProductImage::findOrFail($id);
             // Delete the image file from the folder
@@ -170,7 +172,8 @@ class ProductController extends Controller
             return response()->json(['message' => 'success'])->setStatusCode(200);
         } 
         } catch (\Exception $e) {
-            throw $e;
+           
+            return response()->json($e)->setStatusCode(500);
         }
     }
 

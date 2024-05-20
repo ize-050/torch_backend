@@ -53,7 +53,7 @@ export default function Edit({banner}) {
         
             formData.append('banner_picture', acceptedFiles[0]);
             try {
-                const response = await axios.post('http://testtourchpro.com/api/banner/images/' + banner.id, formData, {
+                const response = await axios.post('banner/images/' + banner.id, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
                 const url = response.data[0].url;
@@ -79,7 +79,7 @@ export default function Edit({banner}) {
    
         const handleDelete = async (index, banner_id) => {
             try {
-                const response = await axios.delete('http://testtourchpro.com/api/banner/images/' + banner_id, {
+                const response = await axios.delete('banner/images/' + banner_id, {
                     headers: { 'Content-Type': 'multipart/form-data' }
                 });
 
@@ -91,11 +91,11 @@ export default function Edit({banner}) {
         };
     
 
-    const handleFileUpload = async (event) => {
+    const handleEditImage = async (event) => {
         const formData = new FormData();
         formData.append('product_images', event.target.files);
         try {
-            const response = await axios.post('/product/images/' + product.id, formData, {
+            const response = await axios.post('product/images/' + product.id, formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             files.push(response.data);

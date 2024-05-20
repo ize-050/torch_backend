@@ -3,6 +3,8 @@
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\CatgoryController;
+
+
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;

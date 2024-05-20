@@ -7,6 +7,15 @@
 import axios from 'axios';
 window.axios = axios;
 
+
+// Access environment variable
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.baseURL = backendUrl;
+
+window.BASE_URL = backendUrl;
+
+
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
